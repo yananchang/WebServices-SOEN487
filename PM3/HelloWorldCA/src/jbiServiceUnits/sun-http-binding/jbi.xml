@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns1="http://enterprise.netbeans.org/bpel/WarehousesInvocationModueService/WarehousesInvocationModule" xmlns:ns2="http://enterprise.netbeans.org/bpel/WarehousesInvocationModueService/warehouse3InvocationModule" xmlns:ns3="HelloWorldCA" xmlns:ns4="http://enterprise.netbeans.org/bpel/HelloWorld/helloWorld" xmlns:ns5="http://enterprise.netbeans.org/bpel/WarehousesInvocationModueService/warehouse4InvocationModule" xmlns:ns6="http://enterprise.netbeans.org/bpel/WarehousesInvocationModueService/warehouse1InvocationModule" xmlns:ns7="http://service.warehouse.sc.g4.soen487/" xmlns:ns8="http://enterprise.netbeans.org/bpel/WarehousesInvocationModueService/warehouse2InvocationModule" xmlns:ns9="http://j2ee.netbeans.org/wsdl/HelloWorld/src/HelloWorldWSDL" version="1.0">
+    <services binding-component="true">
+        <provides endpoint-name="WarehouseWebServicePort" interface-name="ns7:WarehouseWebService" service-name="ns7:WarehouseWebService"/>
+        <provides endpoint-name="casaPort2" interface-name="ns3:dummyCasaPortType" service-name="ns3:HelloWorldCAService2"/>
+        <consumes endpoint-name="casaPort1" interface-name="ns9:HelloWorldWSDLPortType" service-name="ns3:HelloWorldCAService1"/>
+        <consumes endpoint-name="casaPort2" interface-name="ns3:dummyCasaPortType" service-name="ns3:HelloWorldCAService2"/>
+    </services>
+</jbi>

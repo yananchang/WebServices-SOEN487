@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+
+    <system systemId="http://localhost:8080/WarehouseService1/WarehouseWebService?wsdl" uri="../WarehousesInvocationModueService/localhost_8080/WarehouseService1/WarehouseWebService.wsdl"/>
+    <system systemId="http://localhost:8080/WarehouseService1/WarehouseWebService?xsd=1" uri="../WarehousesInvocationModueService/localhost_8080/WarehouseService1/WarehouseWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/WarehouseService2/WarehouseWebService?wsdl" uri="../WarehousesInvocationModueService/localhost_8080/WarehouseService2/WarehouseWebService.wsdl"/>
+    <system systemId="http://localhost:8080/WarehouseService2/WarehouseWebService?xsd=1" uri="../WarehousesInvocationModueService/localhost_8080/WarehouseService2/WarehouseWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/WarehouseService3/WarehouseWebService?wsdl" uri="../WarehousesInvocationModueService/localhost_8080/WarehouseService3/WarehouseWebService.wsdl"/>
+    <system systemId="http://localhost:8080/WarehouseService3/WarehouseWebService?xsd=1" uri="../WarehousesInvocationModueService/localhost_8080/WarehouseService3/WarehouseWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/WarehouseService4/WarehouseWebService?wsdl" uri="../WarehousesInvocationModueService/localhost_8080/WarehouseService4/WarehouseWebService.wsdl"/>
+    <system systemId="file:/C:/Users/yousra/Documents/NetBeansProjects/soen487-w18-team04/RetailerSystem/WarehousesInvocationModueService/src/Warehouse4_WSDL.wsdl" uri="../WarehousesInvocationModueService/Warehouse4_WSDL.wsdl"/>
+    <system systemId="http://localhost:8080/SupplyChainWebService/PlaceOrderWebService?wsdl" uri="../WarehousesInvocationModueService/localhost_8080/SupplyChainWebService/PlaceOrderWebService.wsdl"/>
+    <system systemId="http://localhost:8080/SupplyChainWebService/PlaceOrderWebService?xsd=1" uri="../WarehousesInvocationModueService/localhost_8080/SupplyChainWebService/PlaceOrderWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/WarehouseService4/WarehouseWebService?xsd=1" uri="WarehousesInvocationModueService/src/_references/_relative/nbproject/private/retriever/localhost_8080/WarehouseService4/WarehouseWebService.xsd_1.xsd"/>
+    <system systemId="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" uri="WarehousesInvocationModueService/src/_references/_relative/nbproject/private/retriever/www.oracle.com/sun/index.html"/>
+    <system systemId="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Attachment" uri="WarehousesInvocationModueService/src/_references/_relative/nbproject/private/retriever/www.oracle.com/sun/index.html"/>
+</catalog>

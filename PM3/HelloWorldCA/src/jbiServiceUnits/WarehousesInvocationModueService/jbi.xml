@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns0="http://enterprise.netbeans.org/bpel/WarehousesInvocationModueService/warehouse1InvocationModule" xmlns:ns1="http://service.warehouse.sc.g4.soen487/" xmlns:ns10="http://j2ee.netbeans.org/wsdl/WarehousesInvocationModueService/src/PlaceOrder_WSDL" xmlns:ns11="http://www.sun.com/jbi/descriptor/service-unit" xmlns:ns2="http://j2ee.netbeans.org/wsdl/WarehousesInvocationModueService/src/Warehouse1_WSDL" xmlns:ns3="http://enterprise.netbeans.org/bpel/WarehousesInvocationModueService/warehouse2InvocationModule" xmlns:ns4="http://j2ee.netbeans.org/wsdl/WarehousesInvocationModueService/src/Warehouse2_WSDL" xmlns:ns5="http://enterprise.netbeans.org/bpel/WarehousesInvocationModueService/warehouse3InvocationModule" xmlns:ns6="http://j2ee.netbeans.org/wsdl/WarehousesInvocationModueService/src/Warehouse3_WSDL" xmlns:ns7="http://enterprise.netbeans.org/bpel/WarehousesInvocationModueService/warehouse4InvocationModule" xmlns:ns8="http://j2ee.netbeans.org/wsdl/WarehousesInvocationModueService/src/Warehosue4_WSDL" xmlns:ns9="http://enterprise.netbeans.org/bpel/WarehousesInvocationModueService/WarehousesInvocationModule" version="1.0">
+    <services binding-component="false">
+        <provides endpoint-name="Warehouse1_WSDLPortTypeRole_myRole" interface-name="ns2:Warehouse1_WSDLPortType" service-name="ns0:PartnerLink1">
+            <ns11:display-name>PartnerLink1</ns11:display-name>
+            <ns11:process-name>warehouse1InvocationModule</ns11:process-name>
+            <ns11:file-path>warehouse1InvocationModule.bpel</ns11:file-path>
+        </provides>
+        <provides endpoint-name="Warehouse2_WSDLPortTypeRole_myRole" interface-name="ns4:Warehouse2_WSDLPortType" service-name="ns3:PartnerLink1">
+            <ns11:display-name>PartnerLink1</ns11:display-name>
+            <ns11:process-name>warehouse2InvocationModule</ns11:process-name>
+            <ns11:file-path>warehouse2InvocationModule.bpel</ns11:file-path>
+        </provides>
+        <provides endpoint-name="Warehouse3_WSDLPortTypeRole_myRole" interface-name="ns6:Warehouse3_WSDLPortType" service-name="ns5:PartnerLink1">
+            <ns11:display-name>PartnerLink1</ns11:display-name>
+            <ns11:process-name>warehouse3InvocationModule</ns11:process-name>
+            <ns11:file-path>warehouse3InvocationModule.bpel</ns11:file-path>
+        </provides>
+        <provides endpoint-name="Warehosue4_WSDLPortTypeRole_myRole" interface-name="ns8:Warehosue4_WSDLPortType" service-name="ns7:PartnerLink1">
+            <ns11:display-name>PartnerLink1</ns11:display-name>
+            <ns11:process-name>warehouse4InvocationModule</ns11:process-name>
+            <ns11:file-path>warehouse4InvocationModule.bpel</ns11:file-path>
+        </provides>
+        <provides endpoint-name="PlaceOrder_WSDLPortTypeRole_myRole" interface-name="ns10:PlaceOrder_WSDLPortType" service-name="ns9:PartnerLinkPlaceOrder">
+            <ns11:display-name>PartnerLinkPlaceOrder</ns11:display-name>
+            <ns11:process-name>WarehousesInvocationModule</ns11:process-name>
+            <ns11:file-path>WarehousesInvocationModule_2.bpel</ns11:file-path>
+        </provides>
+        <consumes endpoint-name="WarehouseWebServiceRole_partnerRole" interface-name="ns1:WarehouseWebService" service-name="ns0:Warehouse1_Invocation">
+            <ns11:display-name>Warehouse1_Invocation</ns11:display-name>
+            <ns11:process-name>warehouse1InvocationModule</ns11:process-name>
+            <ns11:file-path>warehouse1InvocationModule.bpel</ns11:file-path>
+        </consumes>
+        <consumes endpoint-name="WarehouseWebServiceRole_partnerRole" interface-name="ns1:WarehouseWebService" service-name="ns3:Warehouse2_InvocationWSDL">
+            <ns11:display-name>Warehouse2_InvocationWSDL</ns11:display-name>
+            <ns11:process-name>warehouse2InvocationModule</ns11:process-name>
+            <ns11:file-path>warehouse2InvocationModule.bpel</ns11:file-path>
+        </consumes>
+        <consumes endpoint-name="WarehouseWebServiceRole_partnerRole" interface-name="ns1:WarehouseWebService" service-name="ns5:Warehouse3_InvocationWSDL">
+            <ns11:display-name>Warehouse3_InvocationWSDL</ns11:display-name>
+            <ns11:process-name>warehouse3InvocationModule</ns11:process-name>
+            <ns11:file-path>warehouse3InvocationModule.bpel</ns11:file-path>
+        </consumes>
+        <consumes endpoint-name="WarehouseWebServiceRole_partnerRole" interface-name="ns1:WarehouseWebService" service-name="ns7:Warehouse4_Invocation">
+            <ns11:display-name>Warehouse4_Invocation</ns11:display-name>
+            <ns11:process-name>warehouse4InvocationModule</ns11:process-name>
+            <ns11:file-path>warehouse4InvocationModule.bpel</ns11:file-path>
+        </consumes>
+        <consumes endpoint-name="Warehouse1_WSDLPortTypeRole_partnerRole" interface-name="ns2:Warehouse1_WSDLPortType" service-name="ns9:PartnerLink1">
+            <ns11:display-name>PartnerLink1</ns11:display-name>
+            <ns11:process-name>WarehousesInvocationModule</ns11:process-name>
+            <ns11:file-path>WarehousesInvocationModule_2.bpel</ns11:file-path>
+        </consumes>
+        <consumes endpoint-name="Warehouse2_WSDLPortTypeRole_partnerRole" interface-name="ns4:Warehouse2_WSDLPortType" service-name="ns9:PartnerLink2">
+            <ns11:display-name>PartnerLink2</ns11:display-name>
+            <ns11:process-name>WarehousesInvocationModule</ns11:process-name>
+            <ns11:file-path>WarehousesInvocationModule_2.bpel</ns11:file-path>
+        </consumes>
+        <consumes endpoint-name="Warehouse3_WSDLPortTypeRole_partnerRole" interface-name="ns6:Warehouse3_WSDLPortType" service-name="ns9:PartnerLink3">
+            <ns11:display-name>PartnerLink3</ns11:display-name>
+            <ns11:process-name>WarehousesInvocationModule</ns11:process-name>
+            <ns11:file-path>WarehousesInvocationModule_2.bpel</ns11:file-path>
+        </consumes>
+        <consumes endpoint-name="Warehosue4_WSDLPortTypeRole_partnerRole" interface-name="ns8:Warehosue4_WSDLPortType" service-name="ns9:PartnerLink4">
+            <ns11:display-name>PartnerLink4</ns11:display-name>
+            <ns11:process-name>WarehousesInvocationModule</ns11:process-name>
+            <ns11:file-path>WarehousesInvocationModule_2.bpel</ns11:file-path>
+        </consumes>
+    </services>
+</jbi>

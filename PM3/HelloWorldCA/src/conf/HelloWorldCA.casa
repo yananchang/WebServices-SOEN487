@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<casa xmlns="http://java.sun.com/xml/ns/casa" xmlns:ns1="HelloWorldCA" xmlns:ns10="http://enterprise.netbeans.org/bpel/WarehousesInvocationModueService/warehouse4InvocationModule" xmlns:ns11="http://j2ee.netbeans.org/wsdl/WarehousesInvocationModueService/src/Warehosue4_WSDL" xmlns:ns12="http://enterprise.netbeans.org/bpel/WarehousesInvocationModueService/WarehousesInvocationModule" xmlns:ns13="http://j2ee.netbeans.org/wsdl/WarehousesInvocationModueService/src/PlaceOrder_WSDL" xmlns:ns14="http://enterprise.netbeans.org/bpel/HelloWorld/helloWorld" xmlns:ns2="http://j2ee.netbeans.org/wsdl/HelloWorld/src/HelloWorldWSDL" xmlns:ns3="http://service.warehouse.sc.g4.soen487/" xmlns:ns4="http://enterprise.netbeans.org/bpel/WarehousesInvocationModueService/warehouse1InvocationModule" xmlns:ns5="http://j2ee.netbeans.org/wsdl/WarehousesInvocationModueService/src/Warehouse1_WSDL" xmlns:ns6="http://enterprise.netbeans.org/bpel/WarehousesInvocationModueService/warehouse2InvocationModule" xmlns:ns7="http://j2ee.netbeans.org/wsdl/WarehousesInvocationModueService/src/Warehouse2_WSDL" xmlns:ns8="http://enterprise.netbeans.org/bpel/WarehousesInvocationModueService/warehouse3InvocationModule" xmlns:ns9="http://j2ee.netbeans.org/wsdl/WarehousesInvocationModueService/src/Warehouse3_WSDL" xmlns:xlink="http://www.w3.org/2000/xlink">
+    <endpoints>
+        <endpoint endpoint-name="casaPort1" interface-name="ns2:HelloWorldWSDLPortType" name="endpoint1" service-name="ns1:HelloWorldCAService1"/>
+        <endpoint endpoint-name="casaPort2" interface-name="ns1:dummyCasaPortType" name="endpoint2" service-name="ns1:HelloWorldCAService2"/>
+        <endpoint name="endpoint3" endpoint-name="WarehouseWebServicePort" interface-name="ns3:WarehouseWebService" service-name="ns3:WarehouseWebService"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="Warehouse1_WSDLPortTypeRole_myRole" file-path="warehouse1InvocationModule.bpel" interface-name="ns5:Warehouse1_WSDLPortType" name="endpoint4" process-name="warehouse1InvocationModule" service-name="ns4:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="Warehouse2_WSDLPortTypeRole_myRole" file-path="warehouse2InvocationModule.bpel" interface-name="ns7:Warehouse2_WSDLPortType" name="endpoint5" process-name="warehouse2InvocationModule" service-name="ns6:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="Warehouse3_WSDLPortTypeRole_myRole" file-path="warehouse3InvocationModule.bpel" interface-name="ns9:Warehouse3_WSDLPortType" name="endpoint6" process-name="warehouse3InvocationModule" service-name="ns8:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="Warehosue4_WSDLPortTypeRole_myRole" file-path="warehouse4InvocationModule.bpel" interface-name="ns11:Warehosue4_WSDLPortType" name="endpoint7" process-name="warehouse4InvocationModule" service-name="ns10:PartnerLink1"/>
+        <endpoint display-name="PartnerLinkPlaceOrder" endpoint-name="PlaceOrder_WSDLPortTypeRole_myRole" file-path="WarehousesInvocationModule_2.bpel" interface-name="ns13:PlaceOrder_WSDLPortType" name="endpoint8" process-name="WarehousesInvocationModule" service-name="ns12:PartnerLinkPlaceOrder"/>
+        <endpoint display-name="Warehouse1_Invocation" endpoint-name="WarehouseWebServiceRole_partnerRole" file-path="warehouse1InvocationModule.bpel" interface-name="ns3:WarehouseWebService" name="endpoint9" process-name="warehouse1InvocationModule" service-name="ns4:Warehouse1_Invocation"/>
+        <endpoint display-name="Warehouse2_InvocationWSDL" endpoint-name="WarehouseWebServiceRole_partnerRole" file-path="warehouse2InvocationModule.bpel" interface-name="ns3:WarehouseWebService" name="endpoint10" process-name="warehouse2InvocationModule" service-name="ns6:Warehouse2_InvocationWSDL"/>
+        <endpoint display-name="Warehouse3_InvocationWSDL" endpoint-name="WarehouseWebServiceRole_partnerRole" file-path="warehouse3InvocationModule.bpel" interface-name="ns3:WarehouseWebService" name="endpoint11" process-name="warehouse3InvocationModule" service-name="ns8:Warehouse3_InvocationWSDL"/>
+        <endpoint display-name="Warehouse4_Invocation" endpoint-name="WarehouseWebServiceRole_partnerRole" file-path="warehouse4InvocationModule.bpel" interface-name="ns3:WarehouseWebService" name="endpoint12" process-name="warehouse4InvocationModule" service-name="ns10:Warehouse4_Invocation"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="Warehouse1_WSDLPortTypeRole_partnerRole" file-path="WarehousesInvocationModule_2.bpel" interface-name="ns5:Warehouse1_WSDLPortType" name="endpoint13" process-name="WarehousesInvocationModule" service-name="ns12:PartnerLink1"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="Warehouse2_WSDLPortTypeRole_partnerRole" file-path="WarehousesInvocationModule_2.bpel" interface-name="ns7:Warehouse2_WSDLPortType" name="endpoint14" process-name="WarehousesInvocationModule" service-name="ns12:PartnerLink2"/>
+        <endpoint display-name="PartnerLink3" endpoint-name="Warehouse3_WSDLPortTypeRole_partnerRole" file-path="WarehousesInvocationModule_2.bpel" interface-name="ns9:Warehouse3_WSDLPortType" name="endpoint15" process-name="WarehousesInvocationModule" service-name="ns12:PartnerLink3"/>
+        <endpoint display-name="PartnerLink4" endpoint-name="Warehosue4_WSDLPortTypeRole_partnerRole" file-path="WarehousesInvocationModule_2.bpel" interface-name="ns11:Warehosue4_WSDLPortType" name="endpoint16" process-name="WarehousesInvocationModule" service-name="ns12:PartnerLink4"/>
+        <endpoint display-name="MyPartner" endpoint-name="HelloWorldWSDLPortTypeRole_myRole" file-path="helloWorld.bpel" interface-name="ns2:HelloWorldWSDLPortType" name="endpoint17" process-name="helloWorld" service-name="ns14:MyPartner"/>
+    </endpoints>
+    <service-units>
+        <service-engine-service-unit artifacts-zip="WarehousesInvocationModueService.jar" component-name="sun-bpel-engine" defined="true" description="Represents this Service Unit" internal="true" name="HelloWorldCA-WarehousesInvocationModueService" unit-name="WarehousesInvocationModueService" unknown="false" x="85" y="243">
+            <provides endpoint="endpoint4"/>
+            <provides endpoint="endpoint5"/>
+            <provides endpoint="endpoint6"/>
+            <provides endpoint="endpoint7"/>
+            <provides endpoint="endpoint8"/>
+            <consumes endpoint="endpoint9"/>
+            <consumes endpoint="endpoint10"/>
+            <consumes endpoint="endpoint11"/>
+            <consumes endpoint="endpoint12"/>
+            <consumes endpoint="endpoint13"/>
+            <consumes endpoint="endpoint14"/>
+            <consumes endpoint="endpoint15"/>
+            <consumes endpoint="endpoint16"/>
+        </service-engine-service-unit>
+        <service-engine-service-unit artifacts-zip="HelloWorld.jar" component-name="sun-bpel-engine" defined="true" description="Represents this Service Unit" internal="true" name="HelloWorldCA-HelloWorld" unit-name="HelloWorld" unknown="false" x="160" y="101">
+            <provides endpoint="endpoint17"/>
+        </service-engine-service-unit>
+        <binding-component-service-unit artifacts-zip="sun-http-binding.jar" component-name="sun-http-binding" description="Represents this Service Unit" name="HelloWorldCA-sun-http-binding" unit-name="sun-http-binding">
+            <ports>
+                <port bindingType="soap" x="67" y="121">
+                    <link xlink:href="../jbiasa/HelloWorldCA.wsdl#xpointer(/definitions/service[@name='HelloWorldCAService1']/port[@name='casaPort1'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint1"/>
+                    <provides endpoint="endpoint1"/>
+                </port>
+                <port x="67" y="244" bindingType="soap">
+                    <link xlink:href="../jbiasa/HelloWorldCA.wsdl#xpointer(/definitions/service[@name='HelloWorldCAService2']/port[@name='casaPort2'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint2"/>
+                    <provides endpoint="endpoint2"/>
+                </port>
+                <port x="67" y="41">
+                    <link xlink:href="../jbiServiceUnits/WarehousesInvocationModueService/localhost_8080/WarehouseService1/WarehouseWebService.wsdl#xpointer(/definitions/service[@name='WarehouseWebService']/port[@name='WarehouseWebServicePort'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint3"/>
+                    <provides endpoint="endpoint3"/>
+                </port>
+            </ports>
+        </binding-component-service-unit>
+    </service-units>
+    <connections>
+        <connection consumer="endpoint15" provider="endpoint6" state="unchanged"/>
+        <connection consumer="endpoint1" provider="endpoint17" state="new"/>
+        <connection consumer="endpoint16" provider="endpoint7" state="unchanged"/>
+        <connection consumer="endpoint13" provider="endpoint4" state="unchanged"/>
+        <connection consumer="endpoint9" provider="endpoint3" state="unchanged"/>
+        <connection consumer="endpoint10" provider="endpoint3" state="unchanged"/>
+        <connection consumer="endpoint11" provider="endpoint3" state="unchanged"/>
+        <connection consumer="endpoint12" provider="endpoint3" state="unchanged"/>
+        <connection consumer="endpoint14" provider="endpoint5" state="unchanged"/>
+    </connections>
+    <porttypes>
+        <link xlink:href="../jbiasa/HelloWorldCA.wsdl#xpointer(/definitions/portType[@name='dummyCasaPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/HelloWorld/HelloWorldWSDL.wsdl#xpointer(/definitions/portType[@name='HelloWorldWSDLPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/HelloWorldCA.wsdl#xpointer(/definitions/portType[@name='dummyCasaPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WarehousesInvocationModueService/localhost_8080/SupplyChainWebService/PlaceOrderWebService.wsdl#xpointer(/definitions/portType[@name='PlaceOrderWebService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WarehousesInvocationModueService/localhost_8080/WarehouseService1/WarehouseWebService.wsdl#xpointer(/definitions/portType[@name='WarehouseWebService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WarehousesInvocationModueService/localhost_8080/WarehouseService2/WarehouseWebService.wsdl#xpointer(/definitions/portType[@name='WarehouseWebService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WarehousesInvocationModueService/localhost_8080/WarehouseService3/WarehouseWebService.wsdl#xpointer(/definitions/portType[@name='WarehouseWebService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WarehousesInvocationModueService/localhost_8080/WarehouseService4/WarehouseWebService.wsdl#xpointer(/definitions/portType[@name='WarehouseWebService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WarehousesInvocationModueService/PlaceOrder_WSDL.wsdl#xpointer(/definitions/portType[@name='PlaceOrder_WSDLPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WarehousesInvocationModueService/Warehouse1_WSDL.wsdl#xpointer(/definitions/portType[@name='Warehouse1_WSDLPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WarehousesInvocationModueService/Warehouse2_WSDL.wsdl#xpointer(/definitions/portType[@name='Warehouse2_WSDLPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WarehousesInvocationModueService/Warehouse3_WSDL.wsdl#xpointer(/definitions/portType[@name='Warehouse3_WSDLPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WarehousesInvocationModueService/Warehouse4_WSDL.wsdl#xpointer(/definitions/portType[@name='Warehosue4_WSDLPortType'])" xlink:type="simple"/>
+    </porttypes>
+    <bindings>
+        <link xlink:href="../jbiasa/HelloWorldCA.wsdl#xpointer(/definitions/binding[@name='casaBinding1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/HelloWorldCA.wsdl#xpointer(/definitions/binding[@name='casaBinding2'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/HelloWorldCA.wsdl#xpointer(/definitions/binding[@name='casaBinding1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/HelloWorldCA.wsdl#xpointer(/definitions/binding[@name='casaBinding2'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WarehousesInvocationModueService/localhost_8080/SupplyChainWebService/PlaceOrderWebService.wsdl#xpointer(/definitions/binding[@name='PlaceOrderWebServicePortBinding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WarehousesInvocationModueService/localhost_8080/WarehouseService1/WarehouseWebService.wsdl#xpointer(/definitions/binding[@name='WarehouseWebServicePortBinding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WarehousesInvocationModueService/localhost_8080/WarehouseService2/WarehouseWebService.wsdl#xpointer(/definitions/binding[@name='WarehouseWebServicePortBinding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WarehousesInvocationModueService/localhost_8080/WarehouseService3/WarehouseWebService.wsdl#xpointer(/definitions/binding[@name='WarehouseWebServicePortBinding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WarehousesInvocationModueService/localhost_8080/WarehouseService4/WarehouseWebService.wsdl#xpointer(/definitions/binding[@name='WarehouseWebServicePortBinding'])" xlink:type="simple"/>
+    </bindings>
+    <services>
+        <link xlink:href="../jbiasa/HelloWorldCA.wsdl#xpointer(/definitions/service[@name='HelloWorldCAService1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/HelloWorldCA.wsdl#xpointer(/definitions/service[@name='HelloWorldCAService2'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/HelloWorldCA.wsdl#xpointer(/definitions/service[@name='HelloWorldCAService1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/HelloWorldCA.wsdl#xpointer(/definitions/service[@name='HelloWorldCAService2'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WarehousesInvocationModueService/localhost_8080/SupplyChainWebService/PlaceOrderWebService.wsdl#xpointer(/definitions/service[@name='PlaceOrderWebService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WarehousesInvocationModueService/localhost_8080/WarehouseService1/WarehouseWebService.wsdl#xpointer(/definitions/service[@name='WarehouseWebService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WarehousesInvocationModueService/localhost_8080/WarehouseService2/WarehouseWebService.wsdl#xpointer(/definitions/service[@name='WarehouseWebService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WarehousesInvocationModueService/localhost_8080/WarehouseService3/WarehouseWebService.wsdl#xpointer(/definitions/service[@name='WarehouseWebService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WarehousesInvocationModueService/localhost_8080/WarehouseService4/WarehouseWebService.wsdl#xpointer(/definitions/service[@name='WarehouseWebService'])" xlink:type="simple"/>
+    </services>
+    <regions>
+        <region name="WSDL Endpoints" width="150"/>
+        <region name="JBI Modules" width="500"/>
+        <region name="External Modules" width="200"/>
+    </regions>
+</casa>

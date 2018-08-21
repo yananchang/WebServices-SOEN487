@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns1="http://enterprise.netbeans.org/bpel/WarehousesInvocationModueService/WarehousesInvocationModule" xmlns:ns2="http://enterprise.netbeans.org/bpel/WarehousesInvocationModueService/warehouse3InvocationModule" xmlns:ns3="HelloWorldCA" xmlns:ns4="http://enterprise.netbeans.org/bpel/HelloWorld/helloWorld" xmlns:ns5="http://enterprise.netbeans.org/bpel/WarehousesInvocationModueService/warehouse4InvocationModule" xmlns:ns6="http://enterprise.netbeans.org/bpel/WarehousesInvocationModueService/warehouse1InvocationModule" xmlns:ns7="http://service.warehouse.sc.g4.soen487/" xmlns:ns8="http://enterprise.netbeans.org/bpel/WarehousesInvocationModueService/warehouse2InvocationModule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/jbi ./jbi.xsd">
+    <service-assembly>
+        <identification>
+            <name>HelloWorldCA</name>
+            <description>Represents the Service Assembly of HelloWorldCA</description>
+        </identification>
+        <service-unit>
+            <identification>
+                <name>HelloWorldCA-WarehousesInvocationModueService</name>
+                <description>Represents this Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>WarehousesInvocationModueService.jar</artifacts-zip>
+                <component-name>sun-bpel-engine</component-name>
+            </target>
+        </service-unit>
+        <service-unit>
+            <identification>
+                <name>HelloWorldCA-HelloWorld</name>
+                <description>Represents this Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>HelloWorld.jar</artifacts-zip>
+                <component-name>sun-bpel-engine</component-name>
+            </target>
+        </service-unit>
+        <service-unit>
+            <identification>
+                <name>HelloWorldCA-sun-http-binding</name>
+                <description>Represents this Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>sun-http-binding.jar</artifacts-zip>
+                <component-name>sun-http-binding</component-name>
+            </target>
+        </service-unit>
+        <connections>
+            <connection>
+                <consumer endpoint-name="Warehouse3_WSDLPortTypeRole_partnerRole" service-name="ns1:PartnerLink3"/>
+                <provider endpoint-name="Warehouse3_WSDLPortTypeRole_myRole" service-name="ns2:PartnerLink1"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="casaPort1" service-name="ns3:HelloWorldCAService1"/>
+                <provider endpoint-name="HelloWorldWSDLPortTypeRole_myRole" service-name="ns4:MyPartner"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="Warehosue4_WSDLPortTypeRole_partnerRole" service-name="ns1:PartnerLink4"/>
+                <provider endpoint-name="Warehosue4_WSDLPortTypeRole_myRole" service-name="ns5:PartnerLink1"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="Warehouse1_WSDLPortTypeRole_partnerRole" service-name="ns1:PartnerLink1"/>
+                <provider endpoint-name="Warehouse1_WSDLPortTypeRole_myRole" service-name="ns6:PartnerLink1"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="WarehouseWebServiceRole_partnerRole" service-name="ns6:Warehouse1_Invocation"/>
+                <provider endpoint-name="WarehouseWebServicePort" service-name="ns7:WarehouseWebService"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="WarehouseWebServiceRole_partnerRole" service-name="ns8:Warehouse2_InvocationWSDL"/>
+                <provider endpoint-name="WarehouseWebServicePort" service-name="ns7:WarehouseWebService"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="WarehouseWebServiceRole_partnerRole" service-name="ns2:Warehouse3_InvocationWSDL"/>
+                <provider endpoint-name="WarehouseWebServicePort" service-name="ns7:WarehouseWebService"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="WarehouseWebServiceRole_partnerRole" service-name="ns5:Warehouse4_Invocation"/>
+                <provider endpoint-name="WarehouseWebServicePort" service-name="ns7:WarehouseWebService"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="Warehouse2_WSDLPortTypeRole_partnerRole" service-name="ns1:PartnerLink2"/>
+                <provider endpoint-name="Warehouse2_WSDLPortTypeRole_myRole" service-name="ns8:PartnerLink1"/>
+            </connection>
+        </connections>
+    </service-assembly>
+</jbi>

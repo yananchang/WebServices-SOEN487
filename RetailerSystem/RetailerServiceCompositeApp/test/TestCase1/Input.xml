@@ -1,0 +1,37 @@
+<soapenv:Envelope xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.webapp/">
+  <soapenv:Body>
+    <ser:placeOrder>
+      <!--Optional:-->
+      <itemsList>
+        <!--Zero or more repetitions:-->
+        <itemsList>
+          <!--Optional:-->
+          <manufacturerName>Brand1</manufacturerName>
+          <productId>1</productId>
+          <!--Optional:-->
+          <productType>DVD player</productType>
+          <quantity>20</quantity>
+          <unitPrice>100</unitPrice>
+        </itemsList>
+      </itemsList>
+      <!--Optional:-->
+      <customer>
+        <!--Optional:-->
+        <city>Montreal</city>
+        <!--Optional:-->
+        <country>Quebec</country>
+        <customerReferenceNumber>1</customerReferenceNumber>
+        <!--Optional:-->
+        <name>Cust 1</name>
+        <!--Optional:-->
+        <state>Quebec</state>
+        <!--Optional:-->
+        <street1>111 Street</street1>
+        <!--Optional:-->
+        <street2>none</street2>
+        <!--Optional:-->
+        <zip>111 111</zip>
+      </customer>
+    </ser:placeOrder>
+  </soapenv:Body>
+</soapenv:Envelope>

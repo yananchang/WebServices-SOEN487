@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<purchaseorders>
+    <purchaseorder num="1001">
+        <customerref>SC100</customerref>
+        <product>DVD player</product>
+        <quantity>220</quantity>
+        <unitprice>105.0</unitprice>
+        <paid>false</paid>
+    </purchaseorder>
+</purchaseorders>

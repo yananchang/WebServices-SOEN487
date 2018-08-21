@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product type = "DVD player">
+        <manufacturer>Brand3</manufacturer>
+        <unitprice>100.0</unitprice>
+        <quantity>100</quantity>
+    </product>
+    <product type = "video camera">
+        <manufacturer>Brand3</manufacturer>
+        <unitprice>300.0</unitprice>
+        <quantity>100</quantity>
+    </product>
+    <product type = "TV">
+        <manufacturer>Brand3</manufacturer>
+        <unitprice>500.0</unitprice>
+        <quantity>100</quantity>
+    </product>
+</products>

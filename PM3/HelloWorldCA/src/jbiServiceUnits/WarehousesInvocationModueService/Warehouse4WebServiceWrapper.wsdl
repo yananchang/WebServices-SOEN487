@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Warehouse4WebServiceWrapper" targetNamespace="http://enterprise.netbeans.org/bpel/Warehouse4WebServiceWrapper" xmlns:tns="http://enterprise.netbeans.org/bpel/Warehouse4WebServiceWrapper" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:ns="http://service.warehouse.sc.g4.soen487/">
+    <import location="http://localhost:8080/WarehouseService4/WarehouseWebService?wsdl" namespace="http://service.warehouse.sc.g4.soen487/"/>
+    <plnk:partnerLinkType name="WarehouseWebServiceLinkType">
+        <plnk:role name="WarehouseWebServiceRole" portType="ns:WarehouseWebService"/>
+    </plnk:partnerLinkType>
+</definitions>

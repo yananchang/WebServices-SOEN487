@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="PlaceOrder_WSDL" targetNamespace="http://j2ee.netbeans.org/wsdl/WarehousesInvocationModueService/src/PlaceOrder_WSDL"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/WarehousesInvocationModueService/src/PlaceOrder_WSDL" xmlns:ns="http://service.webapp/" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype">
+    <types>
+        <xsd:schema targetNamespace="http://j2ee.netbeans.org/wsdl/WarehousesInvocationModueService/src/PlaceOrder_WSDL">
+            <xsd:import namespace="http://service.webapp/" schemaLocation="http://localhost:8080/SupplyChainWebService/PlaceOrderWebService?xsd=1"/>
+        </xsd:schema>
+    </types>
+    <message name="PlaceOrder_WSDLOperationRequest">
+        <part name="itemList" type="ns:itemList"/>
+        <part name="customer" type="ns:customer"/>
+    </message>
+    <message name="PlaceOrder_WSDLOperationResponse">
+        <part name="itemShippingList" type="ns:itemShippingStatusList"/>
+    </message>
+    <portType name="PlaceOrder_WSDLPortType">
+        <operation name="PlaceOrder_WSDLOperation">
+            <input name="input1" message="tns:PlaceOrder_WSDLOperationRequest"/>
+            <output name="output1" message="tns:PlaceOrder_WSDLOperationResponse"/>
+        </operation>
+    </portType>
+    <plnk:partnerLinkType name="PlaceOrder_WSDL">
+        <!-- A partner link type is automatically generated when a new port type is added. Partner link types are used by BPEL processes. 
+In a BPEL process, a partner link represents the interaction between the BPEL process and a partner service. Each partner link is associated with a partner link type.
+A partner link type characterizes the conversational relationship between two services. The partner link type can have one or two roles.-->
+        <plnk:role name="PlaceOrder_WSDLPortTypeRole" portType="tns:PlaceOrder_WSDLPortType"/>
+    </plnk:partnerLinkType>
+</definitions>

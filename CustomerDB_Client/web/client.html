@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Customer Tables</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                font-size: 15px;
+            }
+
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 1px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h3>Customers Table</h3>
+        <table id="customer"></table>
+        <h3>Discount Table</h3>
+        <table id="discount"></table>
+
+        <h3>Search</h3>       
+        State: <input type="text" id="stateName">
+        <input type="button" value="submit" onclick="search()">      
+        <br>
+        <table id="searchResult"></table>
+
+        <script type="application/javascript">
+            var uri = "http://localhost:8080/CustomerDB/webresources/entities.customer/";
+            var xmlhr1 = new XMLHttpRequest();
+            xmlhr1.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var customer = "customer";
+                    displayTable(this, customer);
+                    displayDiscountTable(this);
+                }
+            }
+            xmlhr1.open("GET", uri, true);
+            xmlhr1.send(null);
+
+            function displayTable(xml, tableName) {
+            var i;
+            var xmlDoc = xml.responseXML;
+            var table="<tr><th>custID</th><th>discountCode</th><th>name</th><th>addressline1</th><th>addressline2</th><th>city</th><th>state</th><th>zip</th><th>phone</th><th>fax</th><th>email</th></tr>";
+            var x = xmlDoc.getElementsByTagName("customer");
+            for (i = 0; i <x.length; i++) { 
+                table += "<tr><td>" +
+                x[i].getElementsByTagName("customerId")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("discountCode")[0].childNodes[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("addressline1")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("addressline2")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("city")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                 x[i].getElementsByTagName("state")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                 x[i].getElementsByTagName("zipCode")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                 x[i].getElementsByTagName("phone")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                 x[i].getElementsByTagName("fax")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("email")[0].childNodes[0].nodeValue +
+               "</td></tr>";
+            }
+            document.getElementById(tableName).innerHTML = table;
+            }
+            
+            function displayDiscountTable(xml) {
+            var i, j;
+            var xmlDoc = xml.responseXML;
+            var table="<tr><th>Dis-code</th><th>Rate</th><th>CustomerIDs</th></tr>";
+            var x = xmlDoc.getElementsByTagName("customer");
+            for (i = 0; i <x.length; i++) {
+                var ids = "";
+                for (j = 0; j <x.length; j++) {
+                    if (x[j].getElementsByTagName("rate")[0].childNodes[0].nodeValue == x[i].getElementsByTagName("rate")[0].childNodes[0].nodeValue){ 
+                      ids += x[j].getElementsByTagName("customerId")[0].childNodes[0].nodeValue + ",";                
+                    } 
+                }
+                table += "<tr><td>" +
+                x[i].getElementsByTagName("discountCode")[0].childNodes[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("rate")[0].childNodes[0].nodeValue +
+                "</td><td>" + ids + "</td></tr>";        
+            }
+            document.getElementById("discount").innerHTML = table;
+            sortTable();         
+            }
+            
+            function sortTable() {
+            var table, rows, switching, i,x, y, shouldSwitch;
+            table = document.getElementById("discount");
+            switching = true;
+            while (switching) {
+               switching = false;
+               rows = table.getElementsByTagName("TR");
+               for (i = 1; i < (rows.length - 1); i++) {
+               shouldSwitch = false;
+               x = rows[i].getElementsByTagName("TD")[1];
+               y = rows[i + 1].getElementsByTagName("TD")[1];
+               if (x.innerHTML > y.innerHTML)  {
+               shouldSwitch= true;
+               break; }
+               if (x.innerHTML == y.innerHTML){
+                   document.getElementById("discount").deleteRow(i + 1);
+               }
+            }
+            if (shouldSwitch) {
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            }
+          }
+        }  
+        
+        function search() {
+            var param = document.getElementById("stateName").value;
+            var searchURI = "http://localhost:8080/CustomerDB/webresources/entities.customer/state/" + param;
+            var xmlhr2 = new XMLHttpRequest();
+            
+            xmlhr2.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var searchResult = "searchResult";
+                    displayTable(this, searchResult);                
+                }
+            }   
+            xmlhr2.open("GET", searchURI, true);
+            xmlhr2.send(null);
+        }      
+        </script>
+    </body>
+</html>

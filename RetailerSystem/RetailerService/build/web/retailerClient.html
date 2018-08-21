@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js'></script>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js'></script>
+        <script src='RestClient.js'></script>
+        
+        <script type="text/javascript">
+        function getItemInfo(){
+          
+           // Source: https://www.kirupa.com/html5/making_http_requests_js.htm
+           var _xhr = new XMLHttpRequest();
+           var _pId = document.getElementById("pId").value;
+           var _url = "http://localhost:8080/RetailerService/retailer/products/"+_pId;
+            _xhr.open('GET', _url, true);
+            _xhr.send();
+  
+            _xhr.addEventListener("readystatechange", processRequest, false);
+            _xhr.onreadystatechange = processRequest;
+            
+            function processRequest(e) {
+                    if (_xhr.readyState == 4 && _xhr.status == 200) {
+                        document.getElementById("answer").value = _xhr.responseText;
+                    }
+            } 
+        } 
+          
+       
+         
+        </script>
+    </head>
+    <body>
+
+        <h1>Retailer JavaScript Client to test JSON format</h1>
+        <br><br>
+        <h3>Calling "retailer/products/PPP"   where PPP is product id</h3>
+        Product Id: <input type="text" placeholder="Enter product Id" id="pId">
+        <button type="submit" id="submit" onclick="getItemInfo()">Submit</button> <br><br><br><br>
+        
+        <h3>Answer:</h3>
+        <textarea rows="6" cols="80" id="answer"></textarea>
+
+
+
+    </body>
+</html>
+
